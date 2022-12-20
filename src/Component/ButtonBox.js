@@ -10,7 +10,7 @@ import {
 import {COLORS} from '../constants/ColorPath';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function ButtonBox({onPress, text}) {
+export default function ButtonBox({onPress, text,}) {
   return (
     <View style={{flex: 1}}>
       <TouchableOpacity activeOpacity={0.5} onPress={onPress}>

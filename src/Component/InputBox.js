@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { COLORS } from '../constants/ColorPath';
 
-export default function InputBox({ placeholder, imageLogo,imageCss, hidePassword, isValidation, onFocus, onBlur, valueOfKey }) {
+export default function InputBox({ placeholder, imageLogo, imageCss, mainInputContainer, hidePassword, isValidation, onFocus, onBlur, valueOfKey }) {
     return (
         <View style={{ flex: 1 }}>
             <View style={{ ...styles.mainInputContainer, borderColor: isValidation ? '#E4C863' : '#E5E5E5' }}>
@@ -25,7 +25,7 @@ export default function InputBox({ placeholder, imageLogo,imageCss, hidePassword
                     onBlur={() => onBlur(valueOfKey)}
                 />
                 <TouchableOpacity>
-                    {hidePassword && <Image style={[styles.imm,imageCss]} source={hidePassword} />}
+                    {hidePassword && <Image style={[styles.imm, imageCss]} source={hidePassword} />}
                 </TouchableOpacity>
             </View>
         </View>

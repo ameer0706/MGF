@@ -32,5 +32,11 @@ export const IMAGEPATH = {
     UserGilImage:require('../Image/UserGil.png'),
     networkLogo:require('../Image/networkLogo.png'),
     leftTopA:require('../Image/leftTopA.png'),
-    daonImage:require('../Image/daonImage.png')
+    daonImage:require('../Image/daonImage.png'),
+    cancel:require('../Image/cancel.png'),
+    Update:require('../Image/Update.png'),
+    mainesImage:require('../Image/mainesImage.png'),
+    pulsImage:require('../Image/pulsImage.png'),
+    modalRogImage:require('../Image/modalRogImage.png'),
+    rightModal:require('../Image/rightModal.png')
 };

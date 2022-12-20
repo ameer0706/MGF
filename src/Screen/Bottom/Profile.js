@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import {
   ScrollView,
@@ -10,13 +10,13 @@ import {
   TouchableOpacity,
   Modal,
 } from 'react-native';
-import {COLORS} from '../../constants/ColorPath';
+import { COLORS } from '../../constants/ColorPath';
 import HeaderBox from '../../Component/HeaderBox';
-import {IMAGEPATH} from '../../constants/ImagePath';
+import { IMAGEPATH } from '../../constants/ImagePath';
 import Modals from '../../Component/Modals';
 import UserProfileData from '../../Component/UserProfileData';
 
-const Profile = ({navigation}) => {
+const Profile = ({ navigation }) => {
   const [isModalVisible, seTisModalVisible] = useState(false);
   const [cancelData, setCancelData] = useState();
   const changeModalVisible = bool => {
@@ -26,17 +26,16 @@ const Profile = ({navigation}) => {
     setCancelData(data);
   };
   return (
-      <View style={{flex: 1}}>
-        <HeaderBox
+    <View style={{ flex: 1 }}>
+      <StatusBar backgroundColor={COLORS.bg} barStyle="light-content" />
+      <HeaderBox
         onPress={() => navigation.goBack()}
-          headerCss={{backgroundColor: COLORS.bg}}
-          headerTitle={'Profile'}
-          titleCss={{color: '#fff'}}
-          headerIcon={{tintColor:"#fff"}}
-        />
-            <ScrollView showsVerticalScrollIndicator={false} backgroundColor={'#fff'}>
-
-        <StatusBar backgroundColor={COLORS.bg} barStyle="light-content" />
+        headerCss={{ backgroundColor: COLORS.bg }}
+        headerTitle={'Profile'}
+        titleCss={{ color: '#fff' }}
+        headerIcon={{ tintColor: '#fff' }}
+      />
+      <ScrollView showsVerticalScrollIndicator={false} backgroundColor={'#fff'}>
         <View style={styles.profileContainer}>
           <TouchableOpacity
             activeOpacity={0.5}
@@ -60,42 +59,40 @@ const Profile = ({navigation}) => {
             </View>
           </TouchableOpacity>
           <UserProfileData
-          onPress={() => navigation.navigate('AccountDetails')}
+            onPress={() => navigation.navigate('AccountDetails')}
             user={IMAGEPATH.userIcons}
             userData="Account details"
           />
           <UserProfileData
-          onPress={() => navigation.navigate('TransferHistory')}
+            onPress={() => navigation.navigate('TransferHistory')}
             user={IMAGEPATH.Transfer}
             userData="Transfer History"
           />
-          <UserProfileData onPress={() => navigation.navigate('OrderHistory')}
-           user={IMAGEPATH.order} userData="Order History" />
+          <UserProfileData
+            onPress={() => navigation.navigate('OrderHistory')}
+            user={IMAGEPATH.order}
+            userData="Order History"
+          />
           <UserProfileData user={IMAGEPATH.Settings} userData="Settings" />
           <UserProfileData
             user={IMAGEPATH.BillingDetails}
             userData="Billing Details"
           />
           <UserProfileData
-          onPress={() => navigation.navigate('Notification')}
+            onPress={() => navigation.navigate('Notification')}
             user={IMAGEPATH.Notifications}
             userData="Notifications"
           />
-          <UserProfileData user={IMAGEPATH.CallImage} userData="Contact Us" />
-
+          <UserProfileData
+            onPress={() => navigation.navigate('ContactUs')}
+            user={IMAGEPATH.CallImage}
+            userData="Contact Us"
+          />
           <UserProfileData
             onPress={() => changeModalVisible(true)}
             user={IMAGEPATH.LogoutImage}
             userData="Logout"
           />
-
-          {/* <Text>{cancelData}</Text> */}
-          {/* <TouchableOpacity
-            // onPress={() => changeModalVisible(true)}
-            style={styles.touchableOpacity}>
-            <Text style={styles.modalText}>Open Modal</Text>
-          </TouchableOpacity> */}
-
           <Modal
             transparent={true}
             animationType="fade"
@@ -104,8 +101,8 @@ const Profile = ({navigation}) => {
             <Modals CancelModalVisible={changeModalVisible} setData={setData} />
           </Modal>
         </View>
-    </ScrollView>
-      </View>
+      </ScrollView>
+    </View>
   );
 };
 
