@@ -11,6 +11,9 @@ import OrderHistory from '../Screen/UserDatail/OrderHistory';
 import Settings from '../Screen/UserDatail/Settings';
 import Notification from '../Screen/UserDatail/Notification';
 import ContactUs from '../Screen/UserDatail/ContactUs';
+import TransferDetails from '../Screen/UserDatail/TransferDetails';
+import OrderDetails from '../Screen/UserDatail/OrderDetails';
+import AddFund from '../Screen/UserDatail/AddFund';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +69,21 @@ const Routes = () => {
         <Stack.Screen
           name="ContactUs"
           component={ContactUs}
+          options={{ headerShown: false }}
+        />
+          <Stack.Screen
+          name="TransferDetails"
+          component={TransferDetails}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="OrderDetails"
+          component={OrderDetails}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="AddFund"
+          component={AddFund}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

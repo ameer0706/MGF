@@ -15,7 +15,7 @@ import HeaderBox from '../../Component/HeaderBox';
 const Market = ({navigation}) => {
   const userListItemData = ({item}) => {
     return (
-      <TouchableOpacity activeOpacity={0.5} style={styles.cardContainer}>
+      <TouchableOpacity onPress={() => navigation.navigate('OrderDetails')} activeOpacity={0.5} style={styles.cardContainer}>
         <View style={styles.cardRow}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <View style={styles.backgroundColorImage}>

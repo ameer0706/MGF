@@ -13,10 +13,10 @@ import {COLORS} from '../../constants/ColorPath';
 import {FLATLLIST} from '../../constants/FlatListData';
 import {IMAGEPATH} from '../../constants/ImagePath';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const userListItem = ({item}) => {
     return (
-      <TouchableOpacity activeOpacity={0.5} style={styles.cardContainer}>
+      <TouchableOpacity onPress={() => navigation.navigate('AddFund')} activeOpacity={0.5} style={styles.cardContainer}>
         <View style={styles.cardRow}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <View style={styles.backgroundColorImage}>

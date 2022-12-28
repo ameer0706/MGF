@@ -202,5 +202,50 @@ export const PendingOrders = [
     Update:'Update',
     nagtive : false,
   },
+];
+
+
+export const TransferHistoryData = [
+  {
+    id:1, UserGilImageConatiner : IMAGEPATH.UserGilImage,
+    AngelaText:'Angela Smith',
+    dateJun:'23 Jun 2022',
+    OunceContainer:'100 Ounce',
+    Assettype:'Asset type',
+    Gold:'Gold',
+    marketvalue : 'market value',
+    Doler:'$ 28.3495.00',
+  },
+  {
+    id:2, UserGilImageConatiner : IMAGEPATH.RoseHope,
+    AngelaText:'Rose Hope',
+    dateJun:'23 Jun 2022',
+    OunceContainer:'100 Ounce',
+    Assettype:'Asset type',
+    Gold:'Gold',
+    marketvalue : 'market value',
+    Doler:'$ 28.3495.00',
+  },
+  {
+    id:3, UserGilImageConatiner : IMAGEPATH.AngelaSmith,
+    AngelaText:'Angela Smith',
+    dateJun:'23 Jun 2022',
+    OunceContainer:'100 Ounce',
+    Assettype:'Asset type',
+    Gold:'Gold',
+    marketvalue : 'market value',
+    Doler:'$ 28.3495.00',
+  },
+  {
+    id:4, UserGilImageConatiner : IMAGEPATH.Samantha1,
+    AngelaText:'Samantha',
+    dateJun:'23 Jun 2022',
+    OunceContainer:'100 Ounce',
+    Assettype:'Asset type',
+    Gold:'Gold',
+    marketvalue : 'market value',
+    Doler:'$ 28.3495.00',
+  }
 ]
+
 

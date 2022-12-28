@@ -38,5 +38,8 @@ export const IMAGEPATH = {
     mainesImage:require('../Image/mainesImage.png'),
     pulsImage:require('../Image/pulsImage.png'),
     modalRogImage:require('../Image/modalRogImage.png'),
-    rightModal:require('../Image/rightModal.png')
+    rightModal:require('../Image/rightModal.png'),
+    RoseHope:require('../Image/RoseHope.png'),
+    AngelaSmith:require('../Image/AngelaSmith.png'),
+    Samantha1:require('../Image/Samantha1.png')
 };
